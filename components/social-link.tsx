@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Globe, Linkedin, Github, Send, Mail, type LucideIcon } from "lucide-react"
-import XIcon from "./x-icon"
+import { Globe, Linkedin, Github, Send, Mail, X, type LucideIcon } from "lucide-react"
 
 interface SocialLinkProps {
   name: string
@@ -20,7 +19,7 @@ export default function SocialLink({ name, icon, url }: SocialLinkProps) {
       case "globe":
         return Globe
       case "twitter":
-        return XIcon
+        return X
       case "linkedin":
         return Linkedin
       case "github":

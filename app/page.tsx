@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react"
+// Import necessary components
 import Image from "next/image"
 import SocialLink from "@/components/social-link"
 import ActionButton from "@/components/action-button"
@@ -9,8 +9,8 @@ export default function Home() {
   const socialLinks = [
     { name: "Website", icon: "globe", url: "https://www.jmmlabs.xyz/" },
     { name: "X", icon: "twitter", url: "https://x.com/Jacob___Meyer" },
-    { name: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/jacobmeyer/" },
-    { name: "GitHub", icon: "github", url: "https://github.com/jacobmeyer" },
+    { name: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/jacobmatthewmeyer/" },
+    { name: "GitHub", icon: "github", url: "https://github.com/jmmlabs" },
     { name: "Telegram", icon: "send", url: "https://t.me/Jacob_Meyer" },
     { name: "Email", icon: "mail", url: "mailto:jacob@jmmlabs.xyz" },
   ]
@@ -34,16 +34,27 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white flex flex-col items-center pb-20">
       {/* Banner Image */}
       <div className="w-full h-48 sm:h-64 md:h-80 relative overflow-hidden">
-        <Image src="/jmmlabsheader.png" alt="Banner" fill priority className="object-cover animate-fade-in" />
+        <Image
+          src="/jmmlabsheader.png"
+          alt="Banner"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover animate-fade-in"
+        />
       </div>
 
       {/* Profile Section */}
       <div className="w-full max-w-md px-4 -mt-16 flex flex-col items-center animate-slide-up">
         {/* Profile Picture */}
         <div className="w-32 h-32 rounded-full border-4 border-black overflow-hidden relative">
-          <div>
-            <Image src="/profpic.jpeg" alt="Jacob Meyer" fill className="object-cover" />
-          </div>
+          <Image
+            src="/profpic.jpeg"
+            alt="Jacob Meyer"
+            fill
+            sizes="128px"
+            className="object-cover"
+          />
         </div>
 
         {/* Name and Description */}
